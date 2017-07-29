@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Exercise</title>
+    </head>
+    <body>
+        <h1>Register</h1>
+        <form>
+            <label for="firstName">First Name:</label>
+            <input type="text" name="firstName" id="firstName" placeholder="John" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" name="lastName" id="lastName" placeholder="Smith" required>
+
+            <div>
+                <label for="male">Male</label>
+                <input type="radio" name="gender" value="male" id="male" required>
+
+                <label for="female">Female</label>
+                <input type="radio" name="gender" value="female" id="female">
+
+                <label for="other">Other</label>
+                <input type="radio" name="gender" value="other" id="other">
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" pattern=".{5,10}" title="Password must be between 5 and 10 characters">
+            </div>
+            <div>
+                <label>
+                    Birthday:
+                    <select name="month">
+                        <option value="Month">Month</option>
+                        <option value="jan">Jan</option>
+                        <option value="feb">Feb</option>
+                        <option value="mar">Mar</option>
+                        <option value="apr">Apr</option>
+                        <option value="may">May</option>
+                        <option value="jun">June</option>
+                        <option value="jul">July</option>
+                        <option value="aug">Aug</option>
+                        <option value="sep">Sep</option>
+                        <option value="oct">Oct</option>
+                        <option value="nov">Nov</option>
+                        <option value="dec">Dec</option>
+                    </select> 
+                    <select name="day">
+                        <option value="day">Day</option>
+                    </select>
+                    <select name="year">
+                        <option value="year">Year</option>
+                    </select>
+                    </label>
+            </div>
+            <div>
+                <label for="terms">I agree to the terms and conditions</label>
+                <input type="checkbox" name="terms" value="false" id="terms" required>
+            </div>
+            <input type="submit">
+        </form>
+    </body>
+</html>
