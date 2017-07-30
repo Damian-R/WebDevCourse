@@ -1,0 +1,36 @@
+/* Element */
+/* Class */
+/* Id */
+/* Star (select every element on page)*/
+* {
+    border: 1px solid lightgray;
+}
+
+/* Descendant Selector (select all elements inside of another specific element)*/
+li a {
+    /* Select all anchor elements that are inside of a list element */
+    color: red;
+}
+
+/* Adjacent Selector */
+h4 + ul {
+    /* Select all unordered list elements that come directly after an h4 element */
+    border: 4px solid red;
+}
+
+/* Attribute Selector */
+a[href="http://www.google.com"] {
+    /* Select all anchor elements that have the attribute href="http://www.google.com" */
+    background: lightblue;
+}
+
+/* nth of type */
+ul:nth-of-type(2) {
+    /* Select the second unordered list */
+    background: lightcoral;
+}
+
+li:nth-of-type(even) {
+    /* Select every even li */
+    background: lightgreen;
+}

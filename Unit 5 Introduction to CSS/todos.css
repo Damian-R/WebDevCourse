@@ -1,0 +1,23 @@
+
+/* element selector */
+li {
+    background: lightblue;
+}
+
+/* id selector */
+#item1 {
+    border: 2px solid yellow;
+}
+
+#item2 {
+    border: 2px solid orange;
+}
+
+#item3 {
+    border: 2px solid red;
+}
+
+/* class selector */
+.completed {
+    text-decoration: line-through;
+}
