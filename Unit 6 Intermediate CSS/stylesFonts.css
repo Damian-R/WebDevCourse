@@ -1,0 +1,57 @@
+/* font family */
+
+h1 {
+    font-family: Georgia;
+}
+
+p {
+    font-family: 'Merriweather', serif;
+}
+
+/* font-size */
+
+body {
+    font-size: 10px;
+}
+
+h1 {
+    font-size: 5.0em;
+}
+
+p {
+    font-size: 20px;
+}
+
+span {
+    font-size: 2.0em;
+}
+
+/* font-weight */
+
+p {
+    /* font-weight: bold; */
+     font-weight: normal; 
+    /* font-weight: 100 - 800; 100 is lightest, 800 is heaviest. */
+}
+
+/* line-height */
+
+p {
+    line-height: 1.2;
+}
+
+/* text-align */
+
+h1 {
+    text-align: center;
+}
+
+/* text-decoration */
+
+p {
+    text-decoration: underline;
+}
+
+h1 {
+    text-decoration: overline;
+}

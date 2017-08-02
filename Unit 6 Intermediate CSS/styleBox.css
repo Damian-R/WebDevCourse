@@ -1,0 +1,8 @@
+p {
+    border: 2px solid lightblue;
+    width: 50%;
+    padding: 5px;
+    /* margin: 20px; */
+    margin: 0 auto 0 auto;
+    text-align: center;
+}
