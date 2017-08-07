@@ -1,0 +1,52 @@
+body {
+    background-color: #232323;
+    margin: 0px;
+}
+
+#container {
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+#navcontent {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#message {
+    display: inline;
+}
+
+#difficulties {
+    display: inline;
+}
+
+#stripe {
+    background: white;
+    text-align: center;
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    margin: 0.1em;
+}
+
+span {
+    font-size: 2.5em;
+    display: block;
+}
+
+.square {
+    width: 30%;
+    background-color: purple;
+    padding-bottom: 30%;
+    margin: 1.66%;
+    float: left;
+    border-radius: 20%;
+}
+
+.winner {
+    border-radius: 0px;
+}
