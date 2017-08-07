@@ -3,19 +3,16 @@
     <head>
         <title>The Colour Game</title>
         <link rel="stylesheet" type="text/css" href="colourGame.css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:700,900" rel="stylesheet">
     </head>
     <body>
         <h1>The Great <span id="colourDisplay">RGB</span> Guessing Game</h1>
 
         <div id="stripe">
-            <div id="navcontent">
-                <button id="reset">New Colours</button>
-                <span id="message">-</span>
-                <div id="difficulties">
-                    <button>EASY</button>
-                    <button>HARD</button>
-                </div>
-            </div>
+            <button id="reset">New Colours</button>
+            <span id="message"></span>
+            <button id="easyBtn">EASY</button>
+            <button id="hardBtn" class="selected">HARD</button>
         </div>
 
         <div id="container">
