@@ -3,40 +3,62 @@ var rgbHeader = document.querySelector("#colourDisplay");
 var header = document.querySelector("h1");
 var message = document.querySelector("#message");
 var resetBtn = document.querySelector("#reset");
-var easyBtn = document.querySelector("#easyBtn");
-var hardBtn = document.querySelector("#hardBtn");
+var modeButtons = document.querySelectorAll(".mode");
 var winnerBox;
 var bGameWon;
 
-resetGame(6);
+init();
 
-easyBtn.addEventListener("click", function(){
-    winnerBox.classList.remove("winner");
-    easyBtn.classList.add("selected");
-    hardBtn.classList.remove("selected");
-    resetGame(3);
-    for(var i = 3; i < boxes.length; i++){
-        boxes[i].style.display = "none";
-    }
-});
-
-hardBtn.addEventListener("click", function(){
-    winnerBox.classList.remove("winner");
-    hardBtn.classList.add("selected");
-    easyBtn.classList.remove("selected");
+function init(){
+    setModeButtons();
+    setBoxListeners();
+    setResetButton();
+    
     resetGame(6);
-    for(var i = 3; i < boxes.length; i++){
-        boxes[i].style.display = "block";
-    }
-});
+}
 
-resetBtn.addEventListener("click", function(){
-    winnerBox.classList.remove("winner");
-    if(hardBtn.classList.contains("selected"))
-        resetGame(6);
-    else
-        resetGame(3);
-});
+function setModeButtons(){
+    // difficulty button listeners
+    for(var i = 0; i < modeButtons.length; i++){
+        modeButtons[i].addEventListener("click", function(){
+            for(var j = 0; j < modeButtons.length; j++){
+                modeButtons[j].classList.remove("selected");
+            }
+            winnerBox.classList.remove("winner");
+            this.classList.add("selected");
+
+            this.textContent === "EASY" ? resetGame(3): resetGame(6);
+        });
+    }
+}
+
+function setBoxListeners(){
+    // box click listeners
+    for(var i = 0; i < boxes.length; i++){
+        boxes[i].addEventListener("click", function(){
+            if(this.classList.contains("winner")){
+                message.textContent = "Correct!";
+                resetBtn.textContent = "Play Again?";
+                bGameWon = true;
+                changeColours();
+            } else if(!bGameWon){
+                this.style.backgroundColor = "#232323";
+                message.textContent= "Try Again";
+            }
+        });
+    }
+}
+
+function setResetButton(){
+    // reset click listener
+    resetBtn.addEventListener("click", function(){
+        winnerBox.classList.remove("winner");
+        if(hardBtn.classList.contains("selected"))
+            resetGame(6);
+        else
+            resetGame(3);
+    });
+}
 
 function changeColours(colour){
     for(var i = 0; i < boxes.length; i++){
@@ -64,21 +86,13 @@ function resetGame(num){
     winnerBox = boxes[winner];
 
     for(var i = 0; i < boxes.length; i++){
-        boxes[i].style.backgroundColor = colours[i];
-
-        boxes[i].addEventListener("click", function(){
-            if(this.classList.contains("winner")){
-                message.textContent = "Correct!";
-                resetBtn.textContent = "Play Again?";
-                bGameWon = true;
-                changeColours();
-            } else if(!bGameWon){
-                this.style.backgroundColor = "#232323";
-                message.textContent= "Try Again";
-            }
-        });
+        if(colours[i]){
+            boxes[i].style.display = "block";
+            boxes[i].style.backgroundColor = colours[i];
+        } else {
+            boxes[i].style.display = "none";
+        }
     }
-
     winnerBox.classList.add("winner");
     rgbHeader.textContent = winnerBox.style.backgroundColor;
 }
