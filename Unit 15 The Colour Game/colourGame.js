@@ -13,7 +13,7 @@ function init(){
     setModeButtons();
     setBoxListeners();
     setResetButton();
-    
+
     resetGame(6);
 }
 
