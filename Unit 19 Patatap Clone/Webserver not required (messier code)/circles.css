@@ -32,21 +32,31 @@ h1, h2 {
 }
 
 button {
-    height: 48px;
-    border-radius: 24px;
-    letter-spacing: 1px;
+    color: white;
+    background: none;
+    height: 50px;
+    border-radius: 25px;
+    letter-spacing: 3px;
     font-family: 'Lato';
     opacity: 0;
-    border: none;
-    font-size: 20px;
+    border: 3px solid transparent;
+    font-size: 15px;
     padding: 10px;
-    background: #333333;
     transition: all 1.0s;
     outline: none;
+    text-transform: uppercase;
+}
+
+button:hover {
+    border: 3px solid lightgreen;
 }
 
 #container:hover button{
     opacity: 1;
+}
+
+.enabled:hover {
+    border: 3px solid lightcoral;
 }
 
 .visible {
@@ -54,6 +64,5 @@ button {
 }
 
 .enabled {
-    background: #336633;
     content: "Stop Background Music";
 }
