@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    background: #212121;
+    font-family: 'Montserrat';
+}
+
+#header {
+    margin: 180px auto;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+}
+
+#intro {
+    display: inline-block;
+    margin: 0;
+}
+
+h1, h4, h6 {
+    margin: 0;
+    line-height: 1;
+}
+
+#navbar {
+    text-align: right;
+    padding-right: 30px;
+    cursor: default;
+}
+
+#navbar button {
+    background: none;
+    color: #fefefe;
+    border: 3px solid transparent;
+    padding: 10px 15px;
+    outline: none;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    border-radius: 25px;
+    letter-spacing: 2px;
+}
+
+#navbar .navBtn:hover {
+    cursor: pointer;
+    border: 3px solid white;
+    color: #fefefe;
+}
+
+#navbar:hover button {
+    color: #666666;
+}
+
+#secondDiv {
+    margin-top: 120px;
+    background: #edeeef;
+}
+
+.content {
+    height: 400px;
+}
+
+#extra div {
+    margin: 40px auto;
+    box-shadow: 0 -1px 3px black, 0 -5px 10px #111111, 0 1px 3px black, 0 5px 10px #111111;
+    position: relative;
+}
+
+#extra div:nth-child(2n) {
+    background: #fff;
+}
+
+div {
+    margin-top: 10px;
+}
+
+.other {
+    color: #666666;
+}
