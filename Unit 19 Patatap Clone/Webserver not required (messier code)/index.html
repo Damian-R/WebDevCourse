@@ -232,13 +232,17 @@
             circles.unshift(circle);
         }
 
-        var buttons = document.querySelectorAll("button");
+        var picture = document.querySelector("#picture");
 
-        document.querySelector("#picture").addEventListener("mousemove", function(){
+        picture.addEventListener("mousemove", function(){
             bMoving = true;
         });
 
-        buttons[0].addEventListener("click", function(){
+        var allButtons = document.querySelectorAll("button");
+
+        var musicButton = document.querySelector("#music");
+
+        musicButton.addEventListener("click", function(){
             this.classList.toggle("enabled");
             if(this.classList.contains("enabled")){
                 this.textContent = "Stop Music";
@@ -246,6 +250,17 @@
             } else {
                 this.textContent = "Play Music";
                 backgroundMusic.stop();
+            }
+        });
+
+        var simplify = document.querySelector("#simplify");
+
+        simplify.addEventListener("click", function(){
+            this.classList.toggle("enabled");
+            if(this.classList.contains("enabled")){
+                bSimplify = false;
+            } else {
+                bSimplify = true;
             }
         });
 
@@ -268,17 +283,18 @@
                 if(triangles[i].area < 5){
                     triangles[i].remove();
                     triangles.splice(i,1);
-                    console.log(triangles);
                 }
             }
 
             if(bMoving){
-                for(var i = 0; i < buttons.length; i++){
-                    buttons[i].classList.add("visible");
+                for(var i = 0; i < allButtons.length; i++){
+                    allButtons[i].classList.add("visible");
+                    picture.style.cursor = "default";
                 }
             } else {
-                for(var i = 0; i < buttons.length; i++){
-                    buttons[i].classList.remove("visible");
+                for(var i = 0; i < allButtons.length; i++){
+                    allButtons[i].classList.remove("visible");
+                    picture.style.cursor = "none";
                 }
             }
 
@@ -289,8 +305,8 @@
     <body>
         <div id="picture">
             <div id="container">
-                <button class="disabled">Play Music</button>
-                <button>Simplify Shapes</button>
+                <button class="disabled" id="music">Play Music</button>
+                <button class="disabled" id="simplify">Simplified Shapes</button>
             </div>
             <canvas id="myCanvas" resize></canvas>
         </div>

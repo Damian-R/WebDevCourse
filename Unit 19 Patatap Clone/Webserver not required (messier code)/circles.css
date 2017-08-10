@@ -45,6 +45,7 @@ button {
     transition: all 1.0s;
     outline: none;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 button:hover {
