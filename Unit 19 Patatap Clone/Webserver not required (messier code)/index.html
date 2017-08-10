@@ -4,6 +4,7 @@
         <title>Circles</title>
         <script type="text/javascript" src="lib/paper-full.js"></script>
         <script type="text/javascript" src="lib/howler.core.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="circles.css">
         <script type="text/paperscript" canvas="myCanvas">
         var keyData = {
@@ -191,6 +192,11 @@
             }
         };
 
+        var backgroundMusic = new Howl({
+            src: ['bg1.wav'],
+            volume: 0.1,
+            loop: true
+        });
 
         var circles = [];
         var triangles = [];
@@ -223,9 +229,22 @@
 
         var buttons = document.querySelectorAll("button");
 
-            document.querySelector("#picture").addEventListener("mousemove", function(){
-                bMoving = true;
+        document.querySelector("#picture").addEventListener("mousemove", function(){
+            bMoving = true;
+        });
+
+        for(var i = 0; i < buttons.length; i++){
+            buttons[i].addEventListener("click", function(){
+                this.classList.toggle("enabled");
+                if(this.classList.contains("enabled")){
+                    this.textContent = "Stop Background Music";
+                    backgroundMusic.play();
+                } else {
+                    this.textContent = "Play Background Music";
+                    backgroundMusic.stop();
+                }
             });
+        }
 
         function onFrame(event){
             for(var i = 0; i < circles.length; i++){
@@ -267,8 +286,7 @@
     <body>
         <div id="picture">
             <div id="container">
-                <button>Test</button>
-                <button>Test 2</button>
+                <button>Play Background Music</button>
             </div>
             <canvas id="myCanvas" resize></canvas>
         </div>
