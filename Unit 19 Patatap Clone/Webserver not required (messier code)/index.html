@@ -196,6 +196,8 @@
         var triangles = [];
         var gravity = -0.002;
 
+        var bMoving = false;
+
         function onKeyDown(event) {
             var colour = "orange";
             if(keyData[event.key]){
@@ -218,6 +220,13 @@
             circle.fillColor = colour;
             circles.unshift(circle);
         }
+
+        var buttons = document.querySelectorAll("button");
+
+            document.querySelector("#picture").addEventListener("mousemove", function(){
+                bMoving = true;
+            });
+
         function onFrame(event){
             for(var i = 0; i < circles.length; i++){
                 circles[i].fillColor.hue += 0.6;
@@ -227,6 +236,7 @@
                     circles.splice(i,1);
                 }
             }
+
             for(var i = 0; i < triangles.length; i++){
                 triangles[i].fillColor.hue += 1;
                 triangles[i].scale(0.97);
@@ -239,10 +249,28 @@
                     console.log(triangles);
                 }
             }
+
+            if(bMoving){
+                for(var i = 0; i < buttons.length; i++){
+                    buttons[i].classList.add("visible");
+                }
+            } else {
+                for(var i = 0; i < buttons.length; i++){
+                    buttons[i].classList.remove("visible");
+                }
+            }
+
+            bMoving = false;
         }
         </script>
     </head>
     <body>
-        <canvas id="myCanvas" resize></canvas>
+        <div id="picture">
+            <div id="container">
+                <button>Test</button>
+                <button>Test 2</button>
+            </div>
+            <canvas id="myCanvas" resize></canvas>
+        </div>
     </body>
 </html>
