@@ -5,7 +5,8 @@
 .navbar-inverse {
     background: none;
     border: none;
-    margin-top: 10px;
+    padding: 5px 10px;
+    transition: all 0.4s;
 }
 
 .navbar-right li a {
@@ -15,7 +16,6 @@
     border-radius: 40px;
     transition: all 0.28s;
     font-size: 13.333px;
-    /* font-weight: 700; */
     letter-spacing: 2px;
     text-transform: uppercase;
     outline: none;
@@ -30,6 +30,10 @@
 .navbar-right li a:hover {
     border: 3px solid white;
     color: white !important;
+}
+
+.navbar-inverse .navbar-collape.in {
+    opacity: 1;
 }
 
 .info-block {
@@ -47,6 +51,7 @@
 body {
     background: #222;
     font-family: 'Montserrat';
+    padding-top: 70px;
 }
 
 h1, h4, h6 {
