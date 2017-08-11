@@ -39,13 +39,19 @@
 .info-block {
     background: #eefeef;
     color: #666666;
-    height: 400px;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
-.info-block h1{
+.info-block h1, h3{
     background: #eefeef;
     color: #222222;
+}
+
+.info-block h3 {
+    font-size: 4em;
+    margin: 0;
+    line-height: 1;
+    text-align: center;
 }
 
 body {
@@ -62,6 +68,14 @@ h1, h4, h6 {
     line-height: 1;
 }
 
+hr {
+	height: 6px;
+	background: url(http://ibrahimjabbari.com/english/images/hr-11.png) repeat-x 0 0;
+    border: 0;
+    margin: 20px 20%;
+}
+
+
 h1 {
     font-size: 8em;
 }
@@ -69,6 +83,7 @@ h1 {
 h4 {
     font-size: 3em;
 }
+
 h6 {
     font-size: 2em;
 }
