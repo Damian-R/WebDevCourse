@@ -2,41 +2,43 @@
 <html>
     <head>
         <title>Damian Reiter</title>
-        <link rel="stylesheet" type="text/css" href="indexStyles.css">
-        <link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="styles.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
     </head>
     <body>
+        <div>
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    </div>
 
-        <div id="navbar">
-            <button class="navBtn">About</button>
-            <button class="navBtn">Projects</button>
-            <a href="https://github.com/Damian-R"><button class="navBtn">GitHub</button></a>
-            <button class="navBtn"><strong>Resume</strong></button>
-            <button class="navBtn"><strong>Contact</strong></button>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#"><strong>Resume</strong></a></li>
+                        <li><a href="#"><strong>Contact</strong></a></li>
+                    </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+                </nav>
+        </div> <!-- navbar div -->
+
+        <div id="content"> <!-- Content div -->
+            <h1>Test</h1>
         </div>
 
-        <div id="site">
-            <div id="header">
-                <div id="intro">
-                    <h1>Damian Reiter</h1>
-                    <h4>1A Computer Engineering</h4>
-                    <h6>At the University of Waterloo</h6>
-                </div>
-            </div>
-
-            <div id="extra">
-                <div id="secondDiv" class="content">
-                
-                </div>
-
-                <div id="thirdDiv" class="content">
-                
-                </div>
-            </div>
-        </div>
-        
-        <script src="indexScript.js"></script>
+        <script src="lib/js/jquery.min.js" type="text/javascript"></script>
+        <script src="lib/js/bootstrap.min.js" type="text/javascript"></script>
     </body>
 </html>
