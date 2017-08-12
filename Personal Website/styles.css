@@ -1,5 +1,5 @@
 #text-header {
-    margin: 80px auto;
+    margin: 100px auto 170px auto;
 }
 
 .navbar-inverse {
@@ -11,7 +11,7 @@
 
 .navbar-right li a {
     border: 3px solid transparent;
-    padding: 10px 15px;
+    padding: 8px 15px;
     margin-right: 8px;
     border-radius: 40px;
     transition: all 0.28s;
@@ -42,16 +42,25 @@
     margin-bottom: 20px;
 }
 
-.info-block h1, h3{
+.info-block h1, h2{
     background: #eefeef;
     color: #222222;
 }
 
 .info-block h3 {
+    text-align: center;
+}
+
+.info-block h2 {
     font-size: 4em;
     margin: 0;
+    padding-top: 10px;
     line-height: 1;
     text-align: center;
+}
+
+.container .row .info-card a:hover{
+    text-decoration: none;
 }
 
 body {
@@ -73,6 +82,13 @@ hr {
 	background: url(http://ibrahimjabbari.com/english/images/hr-11.png) repeat-x 0 0;
     border: 0;
     margin: 20px 20%;
+}
+
+a hr {
+    height: 6px;
+	background: url(http://ibrahimjabbari.com/english/images/hr-11.png) repeat-x 0 0;
+    border: 0;
+    margin: 10px 10%;
 }
 
 
