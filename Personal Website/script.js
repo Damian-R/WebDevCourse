@@ -26,9 +26,11 @@ setInterval(function(){
     if(didScroll){
         var offset = $('h1').offset().top;
         if($(window).scrollTop() >= offset - 70){
-            navbar.css("background-color", "#222");
+            navbar.css("background-color", "#68CBCF");
+            navbar.css("box-shadow", "2px 0px 4px black")
         } else {
             navbar.css("background-color", "transparent");
+            navbar.css("box-shadow", "none")
         }
 
         didScroll = false;
