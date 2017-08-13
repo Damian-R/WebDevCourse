@@ -1,4 +1,4 @@
-var navbar = $('.navbar-inverse').css("background", "#222");
+var navbar = $('nav');
 var didScroll = false;
 var menuOpen = false;
 
@@ -24,20 +24,13 @@ $('.navbar-toggle').on('click', function(){
 
 setInterval(function(){
     if(didScroll){
-        console.log("scrolled");
-        var distanceHeader = $('h1').offset().top;
-        var distanceContent = $('#welcome-container').offset().top;
-        if($(window).scrollTop() >= distanceHeader - 70){
-            navbar.css("background", "#111");
-            navbar.css("opacity", "0.8");
+        var offset = $('h1').offset().top;
+        if($(window).scrollTop() >= offset - 70){
+            navbar.css("background-color", "#222");
         } else {
-            console.log("setting background none");
-            navbar.css("background", "none");
+            navbar.css("background-color", "transparent");
         }
 
-        if($(window).scrollTop() >= distanceContent - 70){
-            navbar.css("opacity", "1");
-        }
         didScroll = false;
     }
-}, 750);
+}, 250);
