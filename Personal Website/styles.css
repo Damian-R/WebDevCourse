@@ -100,7 +100,7 @@
 }
 
 body {
-    background: url(http://dxsohu.com/wp-content/uploads/2017/06/Background-Image-NP16.png);
+    background: url(img/bg.png);
     font-family: 'Montserrat';
 }
 
@@ -114,14 +114,14 @@ h1, h4, h6 {
 
 hr {
 	height: 6px;
-	background: url(http://ibrahimjabbari.com/english/images/hr-11.png) repeat-x 0 0;
+	background: url(img/hr-img.png) repeat-x 0 0;
     border: 0;
     margin: 20px 20%;
 }
 
 a hr {
     height: 6px;
-	background: url(http://ibrahimjabbari.com/english/images/hr-11.png) repeat-x 0 0;
+	background: url(img/hr-img.png) repeat-x 0 0;
     border: 0;
     margin: 10px 10%;
 }
