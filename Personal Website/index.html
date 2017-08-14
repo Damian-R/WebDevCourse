@@ -9,7 +9,7 @@
     <body>
         <div>
             <nav class="navbar navbar-inverse navbar-fixed-top">
-                <div class="container-fluid">
+                <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -27,10 +27,13 @@
                         <li><a href="#">Projects</a></li>
                         <li><a href="https://github.com/Damian-R">GitHub</a></li>
                         <li class="navitem-bold"><a href="#">Resume</a></li>
-                        <li class="navitem-bold dropdown"><a href="#" data-toggle="dropdown">Contact</a>
+                        <li class="navitem-bold dropdown">
+                            <a href="#" data-toggle="dropdown">Contact</a>
                             <ul class="dropdown-menu">
-                                <li>Item1</li>
-                                <li>Item2</li>
+                                <div id="dropdown-container">
+                                    <li>Item 1</li>
+                                    <li>Item 2</li>
+                                </div>
                             </ul>
                         </li>
                     </ul>

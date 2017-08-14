@@ -30,8 +30,17 @@
     transition: all 0.4s;
 }
 
-.dropdown-toggle:hover {
-    text-decoration: none;
+.dropdown-menu {
+    position: absolute;
+    background: #61DCDF;
+    left: 50%;
+    right: auto;
+}
+
+.dropdown a[aria-expanded="true"] {
+    background-color: transparent !important;
+} .dropdown a[aria-expanded="true"]:focus {
+    border-color: white;
 }
 
 .navbar-right li a {
