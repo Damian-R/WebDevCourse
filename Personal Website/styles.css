@@ -30,6 +30,10 @@
     transition: all 0.4s;
 }
 
+.dropdown-toggle:hover {
+    text-decoration: none;
+}
+
 .navbar-right li a {
     border-top: 3px solid transparent;
     border-bottom: 3px solid transparent;
