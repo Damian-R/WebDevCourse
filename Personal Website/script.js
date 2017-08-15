@@ -1,24 +1,37 @@
 var navbar = $('nav');
 var didScroll = false;
-var menuOpen = false;
+var didResize = false;
+var smallScreen = false;
+
+var jWindow = $(window);
 
 $(window).scroll(function(){
     didScroll = true;
 });
 
-$('#bs-example-navbar-collapse-1').on('show.bs.collapse', function() {
-    navbar.css("opacity", "1");
-    navbar.css("background", "#68CBCF");
-    menuOpen = true;
+$(window).resize(function(){
+    didResize = true;
 });
 
-$('#bs-example-navbar-collapse-1').on('hide.bs.collapse', function() {
+$('#bs-navbar-collapse').on('show.bs.collapse', function() {
+    navbar.css("opacity", "1");
+    navbar.css("background", "#68EECF");
+});
+
+$('#bs-navbar-collapse').on('hide.bs.collapse', function() {
     didScroll = true;
-    menuOpen = false;
 });
 
 $('.navbar-toggle').on('click', function(){
     navbar.css("opacity", "1");
+});
+
+$('.navbar-right').on('show.bs.collapse', function(){
+    console.log("shown");
+});
+
+$('.navbar-right').on('hide.bs.collapse', function(){
+    console.log("hidden");
 });
 
 $('.dropdown').on('show.bs.dropdown', function(e){
@@ -58,4 +71,26 @@ setInterval(function(){
 
         didScroll = false;
     }
+
+    // Check when window has been switched to support smaller screen sizes (such as phones)
+    if(didResize){
+        if(!smallScreen){
+            if(jWindow.width() < 768){
+                console.log("switched to small screen");
+                switchedScreenSize();
+            }
+        } else {
+            if(jWindow.width() > 768){
+                console.log("switched to large screen");
+                switchedScreenSize();
+            }
+        }
+
+        didResize = false;
+    }
 }, 250);
+
+function switchedScreenSize(){
+    didScroll = true;
+    smallScreen = !smallScreen;
+}
