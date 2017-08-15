@@ -5,6 +5,13 @@ var smallScreen = false;
 
 var jWindow = $(window);
 
+if(jWindow.width() < 768)
+    smallScreen = true;
+else
+    smallScreen = false;
+
+$('.navbar-toggle').css("background", "#222");
+
 $(window).scroll(function(){
     didScroll = true;
 });
@@ -19,6 +26,7 @@ $('#bs-navbar-collapse').on('show.bs.collapse', function() {
 });
 
 $('#bs-navbar-collapse').on('hide.bs.collapse', function() {
+    navbar.css("background", "none");
     didScroll = true;
 });
 
@@ -46,19 +54,25 @@ $('.dropdown').on('hide.bs.dropdown', function(e){
     });
 });
 
-// $('.dropdown').hover(function(){
-//     $(".dropdown-menu").slideDown("fast", function(){
-//         console.log("slide complete");
-//     });
-//     $("a[data-toggle='dropdown']").attr("aria-expanded", "true");
-//     $('.dropdown').addClass("open");
-// }, function(){
-//     $(".dropdown-menu").slideUp("fast", function(){
-//     });
-//     $('.dropdown').removeClass("open"); // FIX THE ANIMATION WHEN NAVBAR IS COLLAPSED
-// });
-
 setInterval(function(){
+    // Check when window has been switched to support smaller screen sizes (such as phones)
+    if(didResize){
+        if(!smallScreen){
+            if(jWindow.width() < 768){
+                switchedScreenSize();
+                if($('.navbar-collapse').attr("aria-expanded") == "false")
+                    navbar.css("background", "none");
+            }
+        } else {
+            if(jWindow.width() > 768){
+                switchedScreenSize();
+            }
+        }
+
+        didResize = false;
+    }
+
+    if(!smallScreen)
     if(didScroll){
         var offset = $('h1').offset().top;
         if($(window).scrollTop() >= offset - 70){
@@ -71,26 +85,10 @@ setInterval(function(){
 
         didScroll = false;
     }
-
-    // Check when window has been switched to support smaller screen sizes (such as phones)
-    if(didResize){
-        if(!smallScreen){
-            if(jWindow.width() < 768){
-                console.log("switched to small screen");
-                switchedScreenSize();
-            }
-        } else {
-            if(jWindow.width() > 768){
-                console.log("switched to large screen");
-                switchedScreenSize();
-            }
-        }
-
-        didResize = false;
-    }
 }, 250);
 
 function switchedScreenSize(){
+    navbar.css("background", "#68EECF")
     didScroll = true;
     smallScreen = !smallScreen;
 }
