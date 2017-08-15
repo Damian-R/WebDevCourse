@@ -113,8 +113,22 @@
     text-align: center;
 }
 
+.info-card img {
+    transition: all 0.2s;
+}
+
+.img-wrapper {
+    overflow: hidden;
+    border: none;
+    border-radius: 3px;
+    padding: 0;
+}
+
 .container .row .info-card a:hover{
     text-decoration: none;
+} .container .row .info-card a:hover img{
+    opacity: 0.85;
+    transform: scale(1.1);
 }
 
 body {
