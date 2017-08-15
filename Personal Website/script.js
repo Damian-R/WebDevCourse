@@ -73,18 +73,18 @@ setInterval(function(){
     }
 
     if(!smallScreen)
-    if(didScroll){
-        var offset = $('h1').offset().top;
-        if($(window).scrollTop() >= offset - 70){
-            navbar.css("background-color", "#68EECF");
-            navbar.css("box-shadow", "2px 0px 4px black")
-        } else {
-            navbar.css("background-color", "transparent");
-            navbar.css("box-shadow", "none")
-        }
+        if(didScroll){
+            var offset = $('h1').offset().top;
+            if($(window).scrollTop() >= offset - 70){
+                navbar.css("background-color", "#68EECF");
+                navbar.css("box-shadow", "2px 0px 4px black")
+            } else {
+                navbar.css("background-color", "transparent");
+                navbar.css("box-shadow", "none")
+            }
 
-        didScroll = false;
-    }
+            didScroll = false;
+        }
 }, 250);
 
 function switchedScreenSize(){
