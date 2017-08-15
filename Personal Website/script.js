@@ -22,11 +22,18 @@ $('.navbar-toggle').on('click', function(){
     navbar.css("opacity", "1");
 });
 
+$('.dropdown').hover(function(){
+    $(this).addClass("open");
+    $("a[data-toggle='dropdown']").attr("aria-expanded", "true");
+}, function(){
+    $(this).removeClass("open");
+});
+
 setInterval(function(){
     if(didScroll){
         var offset = $('h1').offset().top;
         if($(window).scrollTop() >= offset - 70){
-            navbar.css("background-color", "#68CBCF");
+            navbar.css("background-color", "#68EECF");
             navbar.css("box-shadow", "2px 0px 4px black")
         } else {
             navbar.css("background-color", "transparent");

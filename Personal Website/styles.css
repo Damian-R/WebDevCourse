@@ -7,22 +7,6 @@
     padding: 20px 0;
 }
 
-.img-container {
-    position: relative;
-    width: 100%;
-    height: 540px;
-    top: 0;
-    left: 0;
-}
-.img-container .image {
-    position: fixed;
-    width: 100%;
-    height: 540px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-
 .navbar-inverse {
     background: none;
     border: none;
@@ -133,7 +117,8 @@
 
 body {
     background: url(img/bg.png);
-    font-family: 'Montserrat';
+    /* font-family: 'Montserrat'; */
+    font-family: 'Segoe UI Black';
 }
 
 h1, h4, h6 {
