@@ -21,12 +21,29 @@ $('.navbar-toggle').on('click', function(){
     navbar.css("opacity", "1");
 });
 
-$('.dropdown').hover(function(){
-    $(this).addClass("open");
-    $("a[data-toggle='dropdown']").attr("aria-expanded", "true");
-}, function(){
-    $(this).removeClass("open");
+$('.dropdown').on('show.bs.dropdown', function(e){
+    $('.navbar').find('.dropdown-menu').first().stop(true, true).slideDown("fast");
 });
+
+$('.dropdown').on('hide.bs.dropdown', function(e){
+    e.preventDefault();
+    $('.navbar').find('.dropdown-menu').first().stop(true, true).slideUp("fast", function(){
+        $("a[data-toggle='dropdown']").attr("aria-expanded", "false");
+        $('.dropdown').removeClass("open");
+    });
+});
+
+// $('.dropdown').hover(function(){
+//     $(".dropdown-menu").slideDown("fast", function(){
+//         console.log("slide complete");
+//     });
+//     $("a[data-toggle='dropdown']").attr("aria-expanded", "true");
+//     $('.dropdown').addClass("open");
+// }, function(){
+//     $(".dropdown-menu").slideUp("fast", function(){
+//     });
+//     $('.dropdown').removeClass("open"); // FIX THE ANIMATION WHEN NAVBAR IS COLLAPSED
+// });
 
 setInterval(function(){
     if(didScroll){
