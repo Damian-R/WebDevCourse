@@ -7,7 +7,6 @@ $(window).scroll(function(){
 });
 
 $('#bs-example-navbar-collapse-1').on('show.bs.collapse', function() {
-    console.log("setting opacity 1");
     navbar.css("opacity", "1");
     navbar.css("background", "#68CBCF");
     menuOpen = true;

@@ -7,6 +7,10 @@
     padding: 20px 0;
 }
 
+.top-btm-margin {
+    margin: 80px 0;
+}
+
 .navbar-inverse {
     background: none;
     border: none;
@@ -45,20 +49,24 @@
     border-radius: 0;
     border: 3px solid white;
 } .navbar-right li.navitem-bold a:hover {
+    opacity: 1 !important;
     border: 3px solid white !important; 
 }
 
 .navbar-right:hover li.navitem-bold a {
-    border: 3px solid #eeeeee;
+    opacity: 0.75;
+    /* border: 3px solid #eeeeee; */
 }
 
 .navbar-right:hover li a {
-    color: #eeeeee !important;
+    /* color: #eeeeee !important; */
+    opacity: 0.75;
 }
 
 .navbar-right li a:hover {
     border-bottom: 3px solid white;
-    color: white !important;
+    /* color: white !important; */
+    opacity: 1 !important;
 }
 
 .navbar-inverse .navbar-collape.in {
