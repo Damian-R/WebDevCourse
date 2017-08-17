@@ -29,6 +29,10 @@
     right: auto;
 }
 
+.dropdown-container {
+    margin: 0 10px;
+}
+
 .dropdown a[aria-expanded="true"] {
     background-color: transparent !important;
 } .dropdown a[aria-expanded="true"]:focus {
@@ -125,6 +129,10 @@
     border: none;
     border-radius: 3px;
     padding: 0;
+}
+
+.class-header {
+    text-align: center;
 }
 
 .container .row .info-card a:hover{

@@ -26,7 +26,7 @@ $('#bs-navbar-collapse').on('show.bs.collapse', function() {
 });
 
 $('#bs-navbar-collapse').on('hide.bs.collapse', function() {
-    navbar.css("background", "none");
+    // navbar.css("background", "none");
     didScroll = true;
 });
 
