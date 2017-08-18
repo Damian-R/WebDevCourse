@@ -12,11 +12,11 @@ else
 
 $('.navbar-toggle').css("background", "#222");
 
-$(window).scroll(function(){
+jWindow.scroll(function(){
     didScroll = true;
 });
 
-$(window).resize(function(){
+jWindow.resize(function(){
     didResize = true;
 });
 
@@ -28,6 +28,19 @@ $('#bs-navbar-collapse').on('show.bs.collapse', function() {
 $('#bs-navbar-collapse').on('hide.bs.collapse', function() {
     // navbar.css("background", "none");
     didScroll = true;
+});
+
+// Make the 'About' button on the navbar scroll you to the projects div
+$('#nav-about-button').on('click', function(){
+    var dest = $('#about-container').offset().top - 75;
+    window.scroll(0, dest);
+});
+
+
+// Make the 'Projects' button on the navbar scroll you to the projects div
+$('#nav-projects-button').on('click', function(){
+    var dest = $('#projects-container').offset().top - 75;
+    window.scroll(0, dest);
 });
 
 $('.navbar-toggle').on('click', function(){

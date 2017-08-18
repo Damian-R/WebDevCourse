@@ -48,6 +48,7 @@
     transition: all 0.28s;
     font-size: 13.333px;
     letter-spacing: 2px;
+    cursor: pointer;
     text-transform: uppercase;
     outline: none;
     text-align: center;
