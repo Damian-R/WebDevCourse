@@ -115,6 +115,7 @@
     /* margin: auto 0; */
     vertical-align: middle;
     text-align: center;
+    padding-right: 0;
 }
 
 /* for gaps between info blocks */
