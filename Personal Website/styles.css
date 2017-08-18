@@ -39,6 +39,12 @@
     border-color: white;
 }
 
+.nav {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 10px 0;
+}
+
 .navbar-right li a {
     border-top: 3px solid transparent;
     border-bottom: 3px solid transparent;
@@ -82,6 +88,12 @@
 
 .navbar-inverse .navbar-collape.in {
     opacity: 1;
+}
+
+.navbar-close {
+    background-color: #68EECF;
+    box-shadow: 2px 0px 4px black;
+    padding: 0;
 }
 
 .navitem-bold {
