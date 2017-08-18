@@ -5,12 +5,16 @@ var smallScreen = false;
 
 var jWindow = $(window);
 
+// get size of window on start up
 if(jWindow.width() < 768)
     smallScreen = true;
 else
     smallScreen = false;
 
-$('.navbar-toggle').css("background", "#222");
+if(smallScreen){
+    navbar.addClass("navbar-close");
+    navbar.addClass("navbar-mobile");
+}
 
 jWindow.scroll(function(){
     didScroll = true;
@@ -26,13 +30,13 @@ $('#bs-navbar-collapse').on('hide.bs.collapse', function() {
 
 // Make the 'About' button on the navbar scroll you to the projects div
 $('#nav-about-button').on('click', function(){
-    var dest = $('#about-container').offset().top - 75;
+    var dest = $('#about-container').offset().top - 81;
     window.scroll(0, dest);
 });
 
 // Make the 'Projects' button on the navbar scroll you to the projects div
 $('#nav-projects-button').on('click', function(){
-    var dest = $('#projects-container').offset().top - 75;
+    var dest = $('#projects-container').offset().top - 81;
     window.scroll(0, dest);
 });
 
@@ -60,10 +64,12 @@ setInterval(function(){
             if(jWindow.width() < 768){
                 switchedScreenSize();
                 navbar.addClass("navbar-close");
+                navbar.addClass("navbar-mobile");
             }
         } else {
             if(jWindow.width() > 768){
                 switchedScreenSize();
+                navbar.removeClass("navbar-mobile");
             }
         }
         didResize = false;
