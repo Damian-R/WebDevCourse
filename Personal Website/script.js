@@ -14,6 +14,11 @@ else
 if(smallScreen){
     navbar.addClass("navbar-close");
     navbar.addClass("navbar-mobile");
+    $('.welcome-img').addClass('align-left');
+    $('about-img').addClass('align-right');
+} else {
+    $('.welcome-img').removeClass('align-left');
+    $('about-img').removeClass('align-right');
 }
 
 jWindow.scroll(function(){
@@ -30,13 +35,13 @@ $('#bs-navbar-collapse').on('hide.bs.collapse', function() {
 
 // Make the 'About' button on the navbar scroll you to the projects div
 $('#nav-about-button').on('click', function(){
-    var dest = $('#about-container').offset().top - 81;
+    var dest = $('#about-container').offset().top - 70;
     window.scroll(0, dest);
 });
 
 // Make the 'Projects' button on the navbar scroll you to the projects div
 $('#nav-projects-button').on('click', function(){
-    var dest = $('#projects-container').offset().top - 81;
+    var dest = $('#projects-container').offset().top - 70;
     window.scroll(0, dest);
 });
 
@@ -89,6 +94,8 @@ setInterval(function(){
 }, 250);
 
 function switchedScreenSize(){
+    $('.welcome-img').toggleClass('align-left');
+    $('.about-img').toggleClass('align-right');
     didScroll = true;
     smallScreen = !smallScreen;
 }

@@ -7,6 +7,14 @@
     padding: 20px 0;
 }
 
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
 .top-btm-margin {
     margin: 80px 0;
 }
@@ -112,10 +120,8 @@
 }
 
 .info-block .img-col {
-    /* margin: auto 0; */
-    vertical-align: middle;
+    padding: 0 20px;
     text-align: center;
-    padding-right: 0;
 }
 
 /* for gaps between info blocks */
@@ -151,8 +157,18 @@
     padding: 0;
 }
 
+.img-circle {
+    border-radius: 50%;
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    margin: 10% 0;
+}
+
 .class-header {
     text-align: center;
+}
+
+.row {
+    vertical-align: middle;
 }
 
 .container .row .info-card a:hover{
