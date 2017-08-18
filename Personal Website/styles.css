@@ -97,6 +97,7 @@
 .info-block .img-col {
     /* margin: auto 0; */
     vertical-align: middle;
+    text-align: center;
 }
 
 .info-block:not(:first-child) {

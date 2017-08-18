@@ -1,0 +1,25 @@
+#text-header {
+    padding-top: 70px;
+    margin: 25px auto;
+}
+
+.carousel {
+    background: #409682;
+
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.item {
+    height: 580px;
+}
+
+body {
+    font-family: 'Roboto';
+    background: #77A1D3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(left, #6A69F1, #79CBCA, #6A69F1);
+    background: -moz-linear-gradient(left, #E684AE, #79CBCA, #77A1D3);
+    background: -o-linear-gradient(left, #E684AE, #79CBCA, #77A1D3);
+    background: linear-gradient(to right, #55C9AE, #90F9E1, #55C9AE);  /* Chrome 10-25, Safari 5.1-6 */
+    font-family: 'Segoe UI Black';
+}
