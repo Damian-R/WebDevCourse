@@ -174,8 +174,8 @@
 .container .row .info-card a:hover{
     text-decoration: none;
 } .container .row .info-card a:hover img{
-    opacity: 0.85;
-    transform: scale(1.1);
+    opacity: 0.9;
+    transform: scale(1.05);
 }
 
 body {
